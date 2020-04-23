@@ -47,12 +47,12 @@ In Sample Case #1, you have a budget of 100 dollars. You can buy the 1st and 3rd
 In Sample Case #2, you have a budget of 50 dollars. You can buy the 1st, 3rd and 4th houses for 30 + 10 + 10 = 50 dollars.
 In Sample Case #3, you have a budget of 300 dollars. You cannot buy any houses (so the answer is 0).'''
 
-N = int(input())  #the length oh the list
+N = int(input())  #NO. of testcases
 out = [] # the output list
 for i in range(N):
     n, b = list(map(int, input().split()))
     v = list(map(int, input().split()))
-    v.sort()  #we sort the list to get the cheaper before
+    v.sort()  #we sort the list to get the cheaper before nlogn
     j, k = 0, 0
     while (j < len(v)):
         if (b - v[j] < 0):
